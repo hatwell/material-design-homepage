@@ -1,0 +1,48 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+button{
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: tomato;
+}
+
+button:hover{
+  background-color: #009688 !important;
+  border-radius: 0;
+}
+
+.color-highlight {
+  background-color: #4CAF50 !important;
+}
+
+
+/*material icons font styles*/
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
