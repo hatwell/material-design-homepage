@@ -1,5 +1,4 @@
 import React from 'react';
-import Paper from 'material-ui/Paper'
 import FontIcon from 'material-ui/FontIcon';
 import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-more';
 import {black, white} from 'material-ui/styles/colors';

@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Card, CardTitle} from 'material-ui/Card'
+import {Card, CardText, CardTitle} from 'material-ui/Card'
 
 class Project extends React.Component {
 
   render(){
     return (
       <Card>
-        <CardTitle title={this.props.title} subtitle={this.props.subtitle}/>
+        <CardTitle title={this.props.name} subtitle={this.props.subtitle}/>
 
         <CardText>
-          <p>Name: {this.props.name}</p>
+          {this.props.name}
         </CardText>
       </Card>
     )

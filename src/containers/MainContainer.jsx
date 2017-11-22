@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import AboutSection from '../components/AboutSection'
 import ProjectsContainer from './ProjectsContainer'
 import ProjectData from '../services/projectData.js'

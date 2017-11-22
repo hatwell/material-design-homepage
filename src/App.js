@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header'
 import MainContainer from './containers/MainContainer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import {Router, Route, IndexRoute, hashHistory} from 'react-router'
-import { HashRouter, Route, IndexRoute } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 
 
 class App extends Component {

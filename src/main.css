@@ -10,6 +10,16 @@ button{
   background-color: tomato;
 }
 
+@font-face { font-family: Roboto; src: url('assets/fonts/Roboto/Roboto-Regular.ttf'); }
+@font-face { font-family: Roboto; src: url('assets/fonts/Roboto/Roboto-Black.ttf'); }
+@font-face { font-family: Roboto; src: url('assets/fonts/Roboto/Roboto-Italic.ttf'); }
+@font-face { font-family: Roboto Light; src: url('assets/fonts/Roboto/Roboto-Light.ttf'); }
+
+*{
+  font-family: Roboto Light;
+
+}
+
 button:hover{
   background-color: #009688 !important;
   border-radius: 0;

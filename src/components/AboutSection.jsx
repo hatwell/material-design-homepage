@@ -1,10 +1,11 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
-import FontIcon from 'material-ui/FontIcon'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import {Card, CardTitle, CardText, CardMedia} from 'material-ui/Card'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import Slider from 'material-ui/Slider'
+import Chip from 'material-ui/Chip'
+import ContactsChip from './ContactsChip.jsx'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import {white100} from 'material-ui/styles/colors'
 
 injectTapEventPlugin();
 
@@ -21,9 +22,17 @@ const styles = {
   },
 
   card: {
-    height: 300
+    height: 'auto'
+  },
+  chip: {
+    margin: 4,
+  },
+  wrapper: {
+    display: 'flex',
+    flexWrap: 'wrap',
   }
 }
+
 
 class AboutSection extends React.Component {
 
@@ -31,24 +40,29 @@ class AboutSection extends React.Component {
   render(){
     return (
       <div>
+        <Card>
         <Tabs>
           <Tab label="About" >
             <Card style={styles.card}>
-              <CardTitle style={styles.headline} title="About Me" subtitle="my great bio..."/>
+              <CardMedia
+                overlay={<CardTitle style={styles.headline} title="About Me" subtitle="my great bio..."/>}
+                >
+                  <img src="img/dalmeny.jpg" alt="picture of the sea and sky at the Dalmeny estate"/>
+                </CardMedia>
+
               <CardText>
-                  <p>I am a full-stack software engineer based in Edinburgh. I favour user-centered Agile approach to development, using test-driven development to ensure I write robust and clean code.</p>
-
-                  <p>In my free time, I love cycling, attending tech events, powerlifting, eating vegan food and watching basketball.</p>
-
-
-                  <p>I am a STEM ambassador, and am particularly interested in encouraging girls and women to learn to code.</p>
+                  I am a full-stack software engineer based in Edinburgh. I favour user-centered Agile approach to development, using test-driven development to ensure I write robust and clean code. In my free time, I love cycling, attending tech events, powerlifting, eating vegan food and watching basketball. I am a STEM ambassador, and am particularly interested in encouraging girls and women to learn to code.
               </CardText>
             </Card>
           </Tab>
 
           <Tab label="Skills" >
             <Card style={styles.card}>
-              <CardTitle style={styles.headline} title="Skills" subtitle="wat i can do"/>
+              <CardMedia
+                overlay={<CardTitle style={styles.headline} title="Skills" subtitle=""/>}
+                >
+                  <img src="img/colors.jpg" alt="geometric colors painted on a wall"/>
+                </CardMedia>
               <CardText>
                 <ul>
                   <li>Java</li>
@@ -62,16 +76,23 @@ class AboutSection extends React.Component {
 
           <Tab label="Contact" >
             <Card style={styles.card}>
-              <CardTitle style={styles.headline} title="Contact" subtitle="i live for notifications"/>
-                <CardText>
-                  <p>
-                    I would love to hear about freelance opportunities, particularly for organization in the charity/third sector.
-                  </p>
-                </CardText>
+              <CardMedia
+                overlay={<CardTitle style={styles.headline} title="Contact me" subtitle="i love mail!"/>}
+                >
+                  <img src="img/sculpturecenter.jpg" alt="courtard in the edinburgh sculpture center"/>
+                </CardMedia>
+                <CardText>I would love to hear about freelance opportunities, particularly for organization in the charity/third sector.</CardText>
 
+                <div style={styles.wrapper}>
+                  <ContactsChip style={styles.chip} url="http://twitter.com/hatwell" label="twitter" color={white100}/>
+                  <ContactsChip style={styles.chip} url="http://facebook.com/hatwell" label="facebook" color={white100}/>
+                  <ContactsChip style={styles.chip} url="http://linkedin.com/in/hatwell" label="linkedin" color={white100}/>
+                  <ContactsChip style={styles.chip} url="http://github.com/in/hatwell" label="github" color={white100}/>
+                </div>
             </Card>
           </Tab>
         </Tabs>
+        </Card>
       </div>
     )
   }

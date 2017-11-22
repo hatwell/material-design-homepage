@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Project from '../components/Project.jsx'
 import ProjectData from '../services/projectData.js'
 
 
@@ -11,10 +12,8 @@ class ProjectsContainer extends React.Component {
 
   render(){
 
-
-
     return (
-      <p>{this.props.projects[0].name}</p>
+      <Project name="Ghost Pals"/>
     )
   }
 
