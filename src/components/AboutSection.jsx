@@ -6,6 +6,7 @@ import Chip from 'material-ui/Chip'
 import ContactsChip from './ContactsChip.jsx'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import {white100} from 'material-ui/styles/colors'
+import ProjectsContainer from '../containers/ProjectsContainer'
 
 injectTapEventPlugin();
 
@@ -18,7 +19,7 @@ const styles = {
   },
 
   tabs: {
-    backgroundColor: '#009688'
+    backgroundColor: 'dodgerblue'
   },
 
   card: {
@@ -30,6 +31,9 @@ const styles = {
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  tab: {
+    backgroundColor: 'dodgerblue'
   }
 }
 
@@ -41,18 +45,19 @@ class AboutSection extends React.Component {
     return (
       <div>
         <Card>
-        <Tabs>
+        <Tabs style={styles.tabs}>
           <Tab label="About" >
             <Card style={styles.card}>
               <CardMedia
                 overlay={<CardTitle style={styles.headline} title="About Me" subtitle="my great bio..."/>}
                 >
-                  <img src="img/dalmeny.jpg" alt="picture of the sea and sky at the Dalmeny estate"/>
+                  <img src="img/dalmeny.jpg" alt="the sea and sky at the Dalmeny estate"/>
                 </CardMedia>
 
               <CardText>
                   I am a full-stack software engineer based in Edinburgh. I favour user-centered Agile approach to development, using test-driven development to ensure I write robust and clean code. In my free time, I love cycling, attending tech events, powerlifting, eating vegan food and watching basketball. I am a STEM ambassador, and am particularly interested in encouraging girls and women to learn to code.
               </CardText>
+              <Slider />
             </Card>
           </Tab>
 
@@ -76,12 +81,12 @@ class AboutSection extends React.Component {
 
           <Tab label="Contact" >
             <Card style={styles.card}>
+
               <CardMedia
-                overlay={<CardTitle style={styles.headline} title="Contact me" subtitle="i love mail!"/>}
-                >
+                overlay={<CardTitle style={styles.headline} title="Contact me" subtitle="i love mail!"/>}>
                   <img src="img/sculpturecenter.jpg" alt="courtard in the edinburgh sculpture center"/>
                 </CardMedia>
-                <CardText>I would love to hear about freelance opportunities, particularly for organization in the charity/third sector.</CardText>
+                <CardText>I would love to hear about freelance opportunities, particularly for organizations in the charity/third sector.</CardText>
 
                 <div style={styles.wrapper}>
                   <ContactsChip style={styles.chip} url="http://twitter.com/hatwell" label="twitter" color={white100}/>
@@ -89,6 +94,15 @@ class AboutSection extends React.Component {
                   <ContactsChip style={styles.chip} url="http://linkedin.com/in/hatwell" label="linkedin" color={white100}/>
                   <ContactsChip style={styles.chip} url="http://github.com/in/hatwell" label="github" color={white100}/>
                 </div>
+              </Card>
+          </Tab>
+
+          <Tab label="Projects">
+            <Card style={styles.card}>
+              <CardMedia overlay = {<CardTitle style={styles.headline} title="Projects" subtitle="Examples of my work"/>}>
+              <img src="img/cph_chimneys_resized.jpg" alt="smokestacks in a harbour in Copenhagen"/>
+              </CardMedia>
+              <ProjectsContainer/>
             </Card>
           </Tab>
         </Tabs>

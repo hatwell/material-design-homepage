@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import Header from './components/Header'
 import MainContainer from './containers/MainContainer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';

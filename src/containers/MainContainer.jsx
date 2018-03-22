@@ -21,7 +21,6 @@ class MainContainer extends React.Component {
     return (
       <div>
         <AboutSection />
-        <ProjectsContainer projects={this.state.projects} />
       </div>
     )
 
